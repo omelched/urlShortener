@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('DJANGO__SECRET_KEY')
 DEBUG = True if os.getenv('DJANGO__DEBUG').lower() in ('true', '1', 'y', 'yes') else False
 SERVE_STATIC = True if os.getenv('DJANGO__SERVE_STATIC').lower() in ('true', '1', 'y', 'yes') else False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get('DJANGO__ALLOWED_HOSTS').split(',')
 
 
 # Application definition
