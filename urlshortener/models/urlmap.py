@@ -27,6 +27,7 @@ class URLMapRecord(models.Model):
         unique=True,
     )
     target = models.URLField(
+        max_length=2000,
         null=False,
         blank=False,
         editable=True,
